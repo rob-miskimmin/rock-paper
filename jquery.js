@@ -24,7 +24,10 @@ function winLose() {
     };
 }
 
-
+function rock() {
+    $(".your-icon").css("border", "10px solid hsl(230, 89%, 62%)");
+    $(".your-icon img").attr("src", " images/icon-rock.svg");
+}
 
 function paper() {
     $(".your-icon").css("border", "10px solid hsl(39, 89%, 49%)");
@@ -80,6 +83,7 @@ $(document).ready(function() {
     });
 
     $(".rock").click(function() {
+        rock();
         step2();
         setTimeout(function() {
             step3();
